@@ -1,8 +1,16 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@material-ui/core";
+import { styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, withStyles } from "@material-ui/core";
 import React, { useContext } from "react";
 import { PeopleContext } from "./person-container";
 import { PersonItem } from "./person-item";
 import './person-list.scss'
+
+
+const CustomTableCell = withStyles({
+    root: {
+        fontSize: '22px'
+    }
+})(TableCell)
+
 
 export const PersonList: React.FunctionComponent = () => {
     const context = useContext(PeopleContext);
@@ -11,12 +19,12 @@ export const PersonList: React.FunctionComponent = () => {
         <TableContainer>
             <Table>
                 <TableHead>
-                    <TableRow className="TableContainer">
-                        <TableCell>Avatar</TableCell>
-                        <TableCell>Name</TableCell>
-                        <TableCell >Age</TableCell>
-                        <TableCell>Height</TableCell>
-                        <TableCell>Action</TableCell>
+                    <TableRow className="table-container">
+                        <CustomTableCell>Avatar</CustomTableCell>
+                        <CustomTableCell>Name</CustomTableCell>
+                        <CustomTableCell >Age</CustomTableCell>
+                        <CustomTableCell>Height</CustomTableCell>
+                        <CustomTableCell>Action</CustomTableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>

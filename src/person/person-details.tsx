@@ -11,24 +11,37 @@ export const PersonDetails: React.FunctionComponent = () => {
     return (
         <div className="person-details">
             <div>
-                <div className="image-container"> <img src={personDetails?.thumbnail}></img></div>
+                <div className="image-container"> <img src={personDetails?.thumbnail} alt=""></img></div>
                 <div className="details-container">
-                    <h2>Personal details</h2>
-                    <div>{personDetails?.name}</div>
-                    <div>{personDetails?.hair_color}</div>
-                    <div>{personDetails?.height}</div>
-                    <div>{personDetails?.weight}</div>
+                    <h2>{personDetails?.name}</h2>
+                    <div className = "details-flex">
+                        <div>
+                            <label>Hair color:</label>
+                            <div>
+                                {personDetails?.hair_color}</div>
+                        </div>
+                        <div>
+                            <label>Height:</label>
+                            <div>
+                                {personDetails?.height}</div>
+                        </div>
+                        <div>
+                            <label>Weight:</label>
+                            <div>
+                                {personDetails?.weight}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
                 <div className="profession-container">
-                    <h2>Professions</h2>
+                    <h3>Professions</h3>
                     {personDetails?.professions.map((profession, index) =>
                         <div key={index}>{profession}</div>
                     )}
                 </div>
                 <div className="friends-container">
-                    <h2>Friends</h2>
+                    <h3>Friends</h3>
                     {personDetails?.friends.map((friend, index) =>
                         <div key={index}>
                             <Link to={`/person/${context.nameToIdMap[friend]}`}>
@@ -36,7 +49,6 @@ export const PersonDetails: React.FunctionComponent = () => {
                             </Link>
                         </div>
                     )}
-
                 </div>
             </div>
         </div>

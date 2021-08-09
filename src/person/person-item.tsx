@@ -2,7 +2,6 @@ import { Avatar, TableCell, TableRow } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Person } from "./person.model";
-import './person-item.scss';
 
 interface Props {
     person: Person;
