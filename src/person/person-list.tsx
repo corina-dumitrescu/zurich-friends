@@ -1,4 +1,4 @@
-import { styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, withStyles } from "@material-ui/core";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, withStyles } from "@material-ui/core";
 import React, { useContext } from "react";
 import { PeopleContext } from "./person-container";
 import { PersonItem } from "./person-item";
