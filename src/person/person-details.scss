@@ -1,0 +1,32 @@
+.person-details {
+    
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    &> div {
+        display: flex;
+        padding: 10px;
+    
+    }
+    .image-container {
+        flex: 2;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .details-container {
+        flex: 3;
+    }
+    .profession-container {
+        flex: 2;
+    }
+    .friends-container {
+        flex: 3;
+    }
+    h2 {
+        font-size: 12;
+        color: lightgray;
+    }
+    
+}
